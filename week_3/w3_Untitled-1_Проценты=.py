@@ -10,13 +10,11 @@
 # вклада через год в рублях и копейках. Дробная часть копеек отбрасывается.
 
 import math
-p = float(input()) / 100
-x = float(input())
-y = float(input()) / 100
-
+p = int(input()) / 100
+x = int(input()) * 100
+y = int(input())
 
 cash = (x + y) + (x + y) * p
-
-cash_1 = int(cash)
-cash_2 = int((cash % cash_1) * 100)
-print(cash_1, cash_2, end="")
+cash_1 = int(cash // 100)
+cash_2 = int(cash % 100)
+print(cash_1, cash_2, end='')
